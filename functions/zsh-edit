@@ -107,6 +107,7 @@ zsh-edit-precmd() {
 
 bindkey -M emacs  '^[/' redo \
                   '^[Y' reverse-yank-pop
+zle -N reverse-yank-pop .edit.visual-yank
 
 for widget in {insert-{last,first},copy-{prev,next}}-word; do
   zle -N "$widget" .edit.insert-word
